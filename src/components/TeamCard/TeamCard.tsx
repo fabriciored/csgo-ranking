@@ -1,3 +1,4 @@
+import Player from "@/elements/Player/Player";
 import styles from "@/styles/TeamCard.module.css";
 
 interface teamProps {
@@ -23,56 +24,12 @@ export default function TeamCard(props: teamProps) {
       </div>
 
       <div className={styles.lower}>
-        <div className={styles.player}>
-        <img src={props.player_picture[0]} alt={props.player_name[0]} />
 
-        <div className={styles.nameAndFlag}>
-          <h4>{props.player_name[0]}</h4>
-          <img src={props.player_flag[0]}/>
-        </div>
-
-
-        </div>
-
-        <div className={styles.player}>
-        <img src={props.player_picture[1]} alt={props.player_name[1]} />
-
-        <div className={styles.nameAndFlag}>
-          <h4>{props.player_name[1]}</h4>
-          <img src={props.player_flag[1]}/>
-        </div>
-
-        </div>
-
-        <div className={styles.player}>
-        <img src={props.player_picture[2]} alt={props.player_name[2]} />
-
-        <div className={styles.nameAndFlag}>
-          <h4>{props.player_name[2]}</h4>
-          <img src={props.player_flag[2]}/>
-        </div>
-
-        </div>
-
-        <div className={styles.player}>
-        <img src={props.player_picture[3]} alt={props.player_name[3]} />
-
-        <div className={styles.nameAndFlag}>
-          <h4>{props.player_name[3]}</h4>
-          <img src={props.player_flag[3]}/>
-        </div>
-
-        </div>
-
-        <div className={styles.player}>
-        <img src={props.player_picture[4]} alt={props.player_name[4]} />
-
-        <div className={styles.nameAndFlag}>
-          <h4>{props.player_name[4]}</h4>
-          <img src={props.player_flag[4]}/>
-        </div>
-
-        </div>
+      <Player picture={props.player_picture[0]} name={props.player_name[0]} flag={props.player_flag[0]}></Player>
+      <Player picture={props.player_picture[1]} name={props.player_name[1]} flag={props.player_flag[1]}></Player>
+      <Player picture={props.player_picture[2]} name={props.player_name[2]} flag={props.player_flag[2]}></Player>
+      <Player picture={props.player_picture[3]} name={props.player_name[3]} flag={props.player_flag[3]}></Player>
+      <Player picture={props.player_picture[4]} name={props.player_name[4]} flag={props.player_flag[4]}></Player>
 
       </div>
     </div>

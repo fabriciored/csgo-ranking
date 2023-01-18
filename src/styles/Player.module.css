@@ -1,0 +1,14 @@
+.playerImage {
+    width: 150px;
+    margin: 5px;
+    -webkit-box-shadow: -7px 7px 30px -16px rgba(0,0,0,0.78);
+    -moz-box-shadow: -7px 7px 30px -16px rgba(0,0,0,0.78);
+    box-shadow: -7px 7px 30px -16px rgba(0,0,0,0.78);
+}
+
+.nameAndFlag {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px
+}

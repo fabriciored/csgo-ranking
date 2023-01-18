@@ -56,7 +56,9 @@ const info = data.result.robotTasks.items[data.result.robotTasks.items.length - 
 
 const originUrl = `${data.result.robotTasks.items[data.result.robotTasks.items.length - 1].inputParameters.originUrl}`
 
-const monthAndDay = originUrl.slice(40)
+const day = originUrl.slice(48, 50)
+const monthLowerCase = originUrl.slice(40, 47)
+const month = monthLowerCase.charAt(0).toUpperCase() + monthLowerCase.slice(1);
 const year = originUrl.slice(35, 39)
 
   return (
@@ -70,7 +72,7 @@ const year = originUrl.slice(35, 39)
       </Head>
       <main className={styles.main}>
 
-        <h1>CSGO Top 10 Teams Ranking as of {`${monthAndDay}/${year}`}<br/></h1>
+        <h1>CSGO Top 10 Teams Ranking: {`${month} ${day}, ${year}`}<br/></h1>
         <div style={{
           "display": "flex",
           "flexDirection": "column",
