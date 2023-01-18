@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react'
 import Head from 'next/head'
 import styles from '@/styles/Home.module.css'
 
+import TeamCard from '@/components/TeamCard/TeamCard';
+
 export default function Home() {
   const [data, setData] = useState({
     result: {
@@ -14,13 +16,13 @@ export default function Home() {
 								rank: "#1",
 								logo: "",
 								name: "",
-                player_pictue1: "",
+                player_picture1: "",
                 player_name1: "",
-                player_pictue2: "",
+                player_picture2: "",
                 player_name2: "",
-                player_pictue3: "",
-                player_name:"",
-                player_pictue4: "",
+                player_picture3: "",
+                player_name3:"",
+                player_picture4: "",
                 player_name4: "",
 								player_picture5: "",
 								player_name5: "",
@@ -58,7 +60,7 @@ const monthAndDay = originUrl.slice(40)
 const year = originUrl.slice(35, 39)
 
   return (
-    
+  
     <>
       <Head>
         <title>CSGO Ranking</title>
@@ -67,6 +69,7 @@ const year = originUrl.slice(35, 39)
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
+
         <h1>CSGO Top 10 Teams Ranking as of {`${monthAndDay}/${year}`}<br/></h1>
         <div style={{
           "display": "flex",
@@ -74,29 +77,21 @@ const year = originUrl.slice(35, 39)
           "alignContent": "space-between",
           "justifyContent": "center",
           "alignItems": "baseline",
-          "width": "300px"
         }}>
         {info.map((info) => 
         <>
-        <div style={{
-          "display": "flex",
-          "width": "100%",
-          "margin": "5px"
-      
-        }}>
-        <h2 style={{
-          "display": "flex",
-          "alignSelf": 'flex-start'
-        }}>{info.rank}</h2>
-        <h2 style={{
-          "display": "flex",
-          "margin": "auto"
-        }}>{info.name}</h2>
-        <img style={{
-          "display": "flex",
-          "alignSelf": 'flex-end'
-        }} width={"30px"} src={info.logo} alt="" />
-        </div>
+                <TeamCard rank={info.rank} 
+                teamName={info.name} 
+                logoUrl={info.logo} 
+
+                player_picture={[info.player_picture1, info.player_picture2, info.player_picture3, info.player_picture4, info.player_picture5]}
+
+                player_name={[info.player_name1, info.player_name2, info.player_name3, info.player_name4, info.player_name5,]}
+                
+                player_flag={[info.player_flag1, info.player_flag2, info.player_flag3, info.player_flag4, info.player_flag5, ]}
+
+
+                ></TeamCard>
         </>
         )}
         </div>

@@ -1,0 +1,67 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 10px;
+    padding: 5px;
+    background-color: gray;
+}
+
+
+
+.rank {
+    display: flex;
+    align-self: flex-start
+}
+
+.name {
+    display: flex;
+    margin: auto
+}
+
+.logo {
+    display: flex;
+    align-self: flex-end;
+
+    width: 40px;
+}
+
+
+.upper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.left {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: row-reverse;
+    margin: 0px 10px 2px 10px;
+}
+
+.right {
+    display: flex;
+    align-self: flex-end;
+    margin: 0px 10px;
+}
+.right>h2 {
+    font-size: 30px;
+}
+
+.lower {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.nameAndFlag {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px
+}
