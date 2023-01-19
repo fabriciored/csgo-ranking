@@ -57,7 +57,7 @@ export default function Home() {
     
     setTimeout(() => {
       setIsLoading(false);
-    }, 1200);
+    }, 1500);
     
   },[]);
 
