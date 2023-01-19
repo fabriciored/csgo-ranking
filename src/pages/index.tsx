@@ -89,13 +89,7 @@ const year = originUrl.slice(35, 39)
       : 
       <>
         <h1>CSGO Top 10 Teams Ranking: {`${month} ${day}${day == '1' ? 'st' : day == '2' ? 'nd' : day == '3' ? 'rd' : 'th'}, ${year}`}<br/></h1>
-        <div style={{
-          "display": "flex",
-          "flexDirection": "column",
-          "alignContent": "space-between",
-          "justifyContent": "center",
-          "alignItems": "baseline",
-        }}>
+        <div className={styles.showTeams}>
         {info.map((info) => 
         <>
                 <TeamCard rank={info.rank} 
