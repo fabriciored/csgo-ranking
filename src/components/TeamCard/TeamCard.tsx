@@ -15,7 +15,9 @@ export default function TeamCard(props: teamProps) {
     <div className={styles.card}>
       <div className={styles.upper}>
         <div className={styles.left}>
-          <h2 className={styles.rank}>{props.rank}</h2>
+          {
+          props.rank == '#1'? <h2 className={styles.rank1}>{props.rank}</h2> : props.rank == '#2' ? <h2 className={styles.rank2}>{props.rank}</h2> : props.rank == '#3' ? <h2 className={styles.rank3}>{props.rank}</h2> : <h2 className={styles.rank}>{props.rank}</h2> 
+          }
           <img className={styles.logo} src={props.logoUrl} alt="" />
         </div>
         <div className={styles.right}>
