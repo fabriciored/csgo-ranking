@@ -12,7 +12,8 @@
 
 .rank {
     display: flex;
-    align-self: flex-start
+    align-self: flex-start;
+    text-shadow: -1px 2px 9px rgba(0,0,0,0.55);
 }
 
 .rank1 {
@@ -53,7 +54,8 @@
 
 .name {
     display: flex;
-    margin: auto
+    margin: auto;
+    text-shadow: -1px 2px 9px rgba(0,0,0,0.55);
 }
 
 .logo {
