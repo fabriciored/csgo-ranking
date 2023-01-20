@@ -5,3 +5,17 @@
 
     padding: 1rem 2rem;
 }
+
+.visitMyWebsite {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.visitMyWebsite:hover {
+    color: #AFAFAF;
+    transition: 0.3s;
+}
+
+
