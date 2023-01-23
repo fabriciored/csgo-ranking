@@ -14,10 +14,10 @@ export default function Navbar() {
         <Link href="/top-teams">
           <p className={styles.navItem}><GiTrophy/> Top Teams</p>
         </Link>
-        <Link href="/events">
+        <Link href="/matches">
           <p className={styles.navItem}><GiCrossedSwords/> Matches</p>
         </Link>
-        <Link href="/matches">
+        <Link href="/events">
           <p className={styles.navItem}><MdEventNote/> Events</p>
         </Link>
     </div>
