@@ -1,0 +1,241 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  min-height: 100vh;
+
+  background: linear-gradient(90deg, rgba(36,48,69,1) 0%, rgba(48,64,93,1) 100%);
+
+  -webkit-box-shadow: -7px 7px 24px -13px rgba(0,0,0,0.75);
+-moz-box-shadow: -7px 7px 24px -13px rgba(0,0,0,0.75);
+box-shadow: -7px 7px 24px -13px rgba(0,0,0,0.75);
+}
+
+/* Enable hover only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+  .card:hover {
+    background: rgba(var(--card-rgb), 0.1);
+    border: 1px solid rgba(var(--card-border-rgb), 0.15);
+  }
+
+  .card:hover span {
+    transform: translateX(4px);
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .thirteen::before {
+    animation: none;
+  }
+
+  .card:hover span {
+    transform: none;
+  }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .content {
+    padding: 4rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    margin-bottom: 120px;
+    max-width: 320px;
+    text-align: center;
+  }
+
+  .card {
+    padding: 1rem 2.5rem;
+  }
+
+  .card h2 {
+    margin-bottom: 0.5rem;
+  }
+
+  .center {
+    padding: 8rem 0 6rem;
+  }
+
+  .center::before {
+    transform: none;
+    height: 300px;
+  }
+
+  .description {
+    font-size: 0.8rem;
+  }
+
+  .description a {
+    padding: 1rem;
+  }
+
+  .description p,
+  .description div {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+  }
+
+  .description p {
+    align-items: center;
+    inset: 0 0 auto;
+    padding: 2rem 1rem 1.4rem;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid rgba(var(--callout-border-rgb), 0.25);
+    background: linear-gradient(
+      to bottom,
+      rgba(var(--background-start-rgb), 1),
+      rgba(var(--callout-rgb), 0.5)
+    );
+    background-clip: padding-box;
+    backdrop-filter: blur(24px);
+  }
+
+  .description div {
+    align-items: flex-end;
+    pointer-events: none;
+    inset: auto 0 0;
+    padding: 2rem;
+    height: 200px;
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgb(var(--background-end-rgb)) 40%
+    );
+    z-index: 1;
+  }
+}
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 701px) and (max-width: 1120px) {
+  .grid {
+    grid-template-columns: repeat(2, 50%);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .vercelLogo {
+    filter: invert(1);
+  }
+
+  .logo,
+  .thirteen img {
+    filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+/* Show Teams Div */
+
+.showTeams {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  justify-content: center;
+  align-items: baseline;
+}
+
+
+/* loading animation */
+
+.lds_roller {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+
+  transform: translateY(30px);
+}
+.lds_roller div {
+  animation: lds_roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  transform-origin: 40px 40px;
+}
+.lds_roller div:after {
+  content:  " ";
+  display: block;
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #fff;
+  margin: -4px 0 0 -4px;
+}
+.lds_roller div:nth-child(1) {
+  animation-delay: -0.036s;
+}
+.lds_roller div:nth-child(1):after {
+  top: 63px;
+  left: 63px;
+}
+.lds_roller div:nth-child(2) {
+  animation-delay: -0.072s;
+}
+.lds_roller div:nth-child(2):after {
+  top: 68px;
+  left: 56px;
+}
+.lds_roller div:nth-child(3) {
+  animation-delay: -0.108s;
+}
+.lds_roller div:nth-child(3):after {
+  top: 71px;
+  left: 48px;
+}
+.lds_roller div:nth-child(4) {
+  animation-delay: -0.144s;
+}
+.lds_roller div:nth-child(4):after {
+  top: 72px;
+  left: 40px;
+}
+.lds_roller div:nth-child(5) {
+  animation-delay: -0.18s;
+}
+.lds_roller div:nth-child(5):after {
+  top: 71px;
+  left: 32px;
+}
+.lds_roller div:nth-child(6) {
+  animation-delay: -0.216s;
+}
+.lds_roller div:nth-child(6):after {
+  top: 68px;
+  left: 24px;
+}
+.lds_roller div:nth-child(7) {
+  animation-delay: -0.252s;
+}
+.lds_roller div:nth-child(7):after {
+  top: 63px;
+  left: 17px;
+}
+.lds_roller div:nth-child(8) {
+  animation-delay: -0.288s;
+}
+.lds_roller div:nth-child(8):after {
+  top: 56px;
+  left: 12px;
+}
+@keyframes lds_roller {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
