@@ -11,8 +11,8 @@ export default function Navbar() {
         <Link href="/">
           <p className={styles.navItem}><AiFillHome/> Home</p>
         </Link>
-        <Link href="/top-teams">
-          <p className={styles.navItem}><GiTrophy/> Top Teams</p>
+        <Link href="/ranking">
+          <p className={styles.navItem}><GiTrophy/> Ranking</p>
         </Link>
         <Link href="/matches">
           <p className={styles.navItem}><GiCrossedSwords/> Matches</p>
