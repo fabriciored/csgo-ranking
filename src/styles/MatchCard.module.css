@@ -1,0 +1,45 @@
+.card {
+    display: flex;
+    flex-direction: row;
+    min-width: 100%;
+    margin: 10px;
+
+    background: linear-gradient(90deg, rgba(74, 97, 139, 1) 0%, rgba(40, 40, 40, 1) 100%);
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: auto;
+
+}
+
+.left {
+    display: flex;
+    width: 380px;
+}
+
+.right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.team1 {
+    display: flex;
+    align-items: center;
+    width: 180px;
+    flex-direction: row-reverse;
+    gap: 5px;
+}
+
+.team2 {
+    display: flex;
+    align-items: center;
+    width: 180px;
+    gap: 5px;
+}
+
+.tbd {
+    width: 30px;
+}
