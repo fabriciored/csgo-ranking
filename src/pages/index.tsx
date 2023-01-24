@@ -15,6 +15,8 @@ export default function Home() {
       <main className={styles.main}>
       <h1>Home</h1>
       <h1>Coming Soon!</h1>
+      <br></br>
+      <h2>Try 'Ranking' or 'Matches'</h2>
       </main>
  
     </>
