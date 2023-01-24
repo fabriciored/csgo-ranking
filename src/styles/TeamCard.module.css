@@ -9,12 +9,12 @@
 }
 
 
-
 .rank {
     display: flex;
     align-self: flex-start;
     text-shadow: -1px 2px 9px rgba(0,0,0,0.55);
 }
+
 
 .rank1 {
     display: flex;
@@ -65,6 +65,13 @@
     width: 50px;
 }
 
+.logoMinimal {
+    display: flex;
+    align-self: flex-end;
+
+    width: 30px;
+}
+
 
 .upper {
     display: flex;
@@ -85,8 +92,26 @@
     transform: translateY(2px);
 }
 
+.leftMinimal {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: row-reverse;
+    margin: 0px 2px 0px 2px;
+    transform: translateY(5px);
+}
+
+
 .left>h2 {
-    font-size: 35px
+    font-size: 35px;
+
+}
+
+.leftMinimal>h2 {
+    font-size: 15px;
+    transform: translateY(5px);
 }
 
 .right {
@@ -96,8 +121,20 @@
     transform: translateY(-5px);
 }
 
+
 .right>h2 {
     font-size: 30px;
+    
+}
+
+.rightMinimal {
+    display: flex;
+    align-self: flex-end;
+    margin: 0px 5px;
+    transform: translateY(-5px);
+}
+.rightMinimal>h2 {
+    font-size: 15px;
     
 }
 
