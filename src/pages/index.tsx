@@ -2,6 +2,8 @@ import Head from 'next/head'
 
 import styles from '@/styles/Home.module.css'
 import Ranking from './ranking'
+import RankingList from '@/components/RankingList/RankingList'
+import MatchesList from '@/components/MatchesList/MatchesList'
 
 
 export default function Home() {
