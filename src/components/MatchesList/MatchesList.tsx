@@ -2,11 +2,8 @@ import { useState, useEffect } from "react";
 import styles from "@/styles/TopTeams.module.css";
 import MatchCard from "../MatchCard/MatchCard";
 
-interface rankingProps {
-  minimal?: boolean;
-}
 
-export default function MatchesList(props: rankingProps) {
+export default function MatchesList() {
   const [isLoading, setIsLoading] = useState(true);
 
   const [data, setData] = useState({
@@ -63,11 +60,6 @@ export default function MatchesList(props: rankingProps) {
     data.result.robotTasks.items[data.result.robotTasks.items.length - 1]
       .capturedLists.top_matches;
 
-
-  const originUrl = `${
-    data.result.robotTasks.items[data.result.robotTasks.items.length - 1]
-      .inputParameters.originUrl
-  }`;
 
   function isNumber(str: string) {
     return /\d/.test(str);
