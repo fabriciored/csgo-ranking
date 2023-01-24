@@ -1,0 +1,9 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    min-height: 100vh;
+    background: linear-gradient(90deg, rgba(36,48,69,1) 0%, rgba(48,64,93,1) 100%);
+    box-shadow: -7px 7px 24px -13px rgb(0 0 0 / 75%);
+}
