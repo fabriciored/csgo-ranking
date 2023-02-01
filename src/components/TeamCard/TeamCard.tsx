@@ -13,7 +13,7 @@ interface teamProps {
 
 export default function TeamCard(props: teamProps) {
   return (
-    <div className={styles.card}>
+    <div className={!props.minimal ? styles.card : styles.cardMinimal}>
       <div className={styles.upper}>
         <div className={!props.minimal ? styles.left : styles.leftMinimal}>
           {props.rank == "#1" ? (

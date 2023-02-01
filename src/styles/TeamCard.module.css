@@ -8,6 +8,16 @@
 
 }
 
+.cardMinimal {
+    display: flex;
+    flex-direction: column;
+
+    margin: 10px;
+
+    background: linear-gradient(90deg, rgba(74, 97, 139, 1) 0%, rgba(40, 40, 40, 1) 100%);
+
+}
+
 
 .rank {
     display: flex;

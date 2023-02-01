@@ -91,7 +91,7 @@ const year = originUrl.slice(35, 39)
       <div className={styles.lds_roller}><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
       : 
       <>
-        <h1>CSGO Top 10 Teams Ranking: {`${month} ${day}${day == '1' ? 'st' : day == '2' ? 'nd' : day == '3' ? 'rd' : 'th'}, ${year}`}<br/></h1>
+        <h1 className={!props.minimal ? styles.title: styles.titleMinimal}>CSGO Top 10 Teams Ranking: {`${month} ${day}${day == '1' ? 'st' : day == '2' ? 'nd' : day == '3' ? 'rd' : 'th'}, ${year}`}<br/></h1>
         <div className={styles.showTeams}>
           {!props.minimal? 
           
@@ -118,7 +118,7 @@ const year = originUrl.slice(35, 39)
           : 
 
           <>
-                  {info.map((info) => 
+                  {info.slice(0, 5).map((info) => 
         <>
                 <TeamCard rank={info.rank} 
                 teamName={info.name} 

@@ -1,5 +1,7 @@
 import Head from 'next/head'
 import styles from '@/styles/Home.module.css'
+import RankingList from '@/components/RankingList/RankingList'
+import MatchesList from '@/components/MatchesList/MatchesList'
 
 export default function Home() {
 
@@ -13,10 +15,14 @@ export default function Home() {
       </Head>      
 
       <main className={styles.main}>
-      <h1>Home</h1>
-      <h1>Coming Soon!</h1>
-      <br></br>
-      <h2>Try 'Ranking' or 'Matches'</h2>
+
+
+      <div className={styles.homeItems}>
+        <div>      <RankingList minimal /></div>
+        <div>      <MatchesList /></div>
+
+
+      </div>
       </main>
  
     </>

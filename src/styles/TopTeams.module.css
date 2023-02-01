@@ -146,7 +146,16 @@ box-shadow: -7px 7px 24px -13px rgba(0,0,0,0.75);
   flex-direction: column;
   align-content: space-between;
   justify-content: center;
-  align-items: baseline;
+  align-items: center;
+}
+
+.title {
+  text-align: center;
+  
+}
+
+.titleMinimal {
+  font-size: 15px;
 }
 
 

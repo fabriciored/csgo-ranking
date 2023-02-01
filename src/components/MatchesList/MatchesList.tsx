@@ -80,7 +80,7 @@ export default function MatchesList() {
         </div>
       ) : (
         <>
-          <h1>
+          <h1 className={styles.title}>
             Next CSGO Matches
             <br />
           </h1>

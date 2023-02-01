@@ -239,3 +239,7 @@ box-shadow: -7px 7px 24px -13px rgba(0,0,0,0.75);
   }
 }
 
+.homeItems {
+  display: flex;
+}
+
