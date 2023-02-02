@@ -18,7 +18,7 @@ export default function Home() {
 
 
       <div className={styles.homeItems}>
-        <div>      <RankingList minimal /></div>
+        <div>      <RankingList minimal maxItems={5} /></div>
         <div>      <MatchesList /></div>
 
 

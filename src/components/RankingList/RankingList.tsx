@@ -4,7 +4,8 @@ import styles from '@/styles/TopTeams.module.css'
 import TeamCard from '@/components/TeamCard/TeamCard';
 
 interface rankingProps {
-  minimal?: boolean
+  minimal?: boolean,
+  maxItems?: number
 }
 
 export default function RankingList(props: rankingProps) {
@@ -91,9 +92,37 @@ const year = originUrl.slice(35, 39)
       <div className={styles.lds_roller}><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
       : 
       <>
-        <h1 className={!props.minimal ? styles.title: styles.titleMinimal}>CSGO Top 10 Teams Ranking: {`${month} ${day}${day == '1' ? 'st' : day == '2' ? 'nd' : day == '3' ? 'rd' : 'th'}, ${year}`}<br/></h1>
+          {!props.maxItems ?
+
+             !props.minimal ? 
+             
+             <h1 className={styles.title}>CSGO Top {info.length} Teams Ranking: {`${month} ${day}${day == '1' ? 'st' : day == '2' ? 'nd' : day == '3' ? 'rd' : 'th'}, ${year}`}<br/></h1>
+             
+             :
+
+                  <h1 className={styles.titleMinimal}>CSGO Top Teams Ranking:<br/> {`${month} ${day}${day == '1' ? 'st' : day == '2' ? 'nd' : day == '3' ? 'rd' : 'th'}, ${year}`}<br/></h1>
+
+                  :
+
+                  !props.minimal ? 
+
+                  <h1 className={styles.title}>CSGO Top {props.maxItems} Teams Ranking: {`${month} ${day}${day == '1' ? 'st' : day == '2' ? 'nd' : day == '3' ? 'rd' : 'th'}, ${year}`}<br/></h1>
+
+                  :
+
+                  <h1 className={styles.titleMinimal}>CSGO Top {props.maxItems} Teams Ranking: <br/>{`${month} ${day}${day == '1' ? 'st' : day == '2' ? 'nd' : day == '3' ? 'rd' : 'th'}, ${year}`}<br/></h1>
+        }
+
         <div className={styles.showTeams}>
-          {!props.minimal? 
+
+
+
+          {
+
+            !props.maxItems ?
+          
+          //if maxItems == false
+          !props.minimal ? 
           
           <>
                   {info.map((info) => 
@@ -118,7 +147,7 @@ const year = originUrl.slice(35, 39)
           : 
 
           <>
-                  {info.slice(0, 5).map((info) => 
+                  {info.map((info) => 
         <>
                 <TeamCard rank={info.rank} 
                 teamName={info.name} 
@@ -136,7 +165,54 @@ const year = originUrl.slice(35, 39)
         </>
         )}
           </>
+
+          :
           
+          // if max items == true:
+          !props.minimal ?
+
+          <>
+                  {info.slice(0, props.maxItems).map((info) => 
+        <>
+                <TeamCard rank={info.rank} 
+                teamName={info.name} 
+                logoUrl={info.logo} 
+
+
+                player_picture={[info.player_picture1, info.player_picture2, info.player_picture3, info.player_picture4, info.player_picture5]}
+
+                player_name={[info.player_name1, info.player_name2, info.player_name3, info.player_name4, info.player_name5,]}
+                
+                player_flag={[info.player_flag1, info.player_flag2, info.player_flag3, info.player_flag4, info.player_flag5, ]}
+
+
+                ></TeamCard>
+        </>
+        )}
+          </> 
+
+          :
+
+          <>
+          {info.slice(0, props.maxItems).map((info) => 
+<>
+        <TeamCard rank={info.rank} 
+        teamName={info.name} 
+        logoUrl={info.logo} 
+        minimal
+
+        player_picture={[info.player_picture1, info.player_picture2, info.player_picture3, info.player_picture4, info.player_picture5]}
+
+        player_name={[info.player_name1, info.player_name2, info.player_name3, info.player_name4, info.player_name5,]}
+        
+        player_flag={[info.player_flag1, info.player_flag2, info.player_flag3, info.player_flag4, info.player_flag5, ]}
+
+
+        ></TeamCard>
+</>
+)}
+  </>
+
           }
    
         </div>
