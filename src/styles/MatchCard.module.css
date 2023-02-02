@@ -1,8 +1,9 @@
 .card {
     display: flex;
     flex-direction: row;
-    min-width: 100%;
+    min-width: 80%;
     margin: 10px;
+    padding: 2px;
 
     background: linear-gradient(90deg, rgba(74, 97, 139, 1) 0%, rgba(40, 40, 40, 1) 100%);
     justify-content: space-between;
@@ -14,7 +15,7 @@
 
 .left {
     display: flex;
-    width: 380px;
+    width: 360px;
 }
 
 .right {
@@ -28,7 +29,7 @@
 .team1 {
     display: flex;
     align-items: center;
-    width: 180px;
+    width: 140px;
     flex-direction: row-reverse;
     gap: 5px;
 }
@@ -36,7 +37,7 @@
 .team2 {
     display: flex;
     align-items: center;
-    width: 180px;
+    width: 140px;
     gap: 5px;
 }
 

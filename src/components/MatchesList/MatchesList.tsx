@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import styles from "@/styles/TopTeams.module.css";
+import styles from "@/styles/MatchesList.module.css";
 import MatchCard from "../MatchCard/MatchCard";
 
 

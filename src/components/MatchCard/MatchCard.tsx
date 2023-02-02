@@ -16,7 +16,7 @@ export default function MatchCard(props: matchProps) {
     <div className={styles.card}>
       <div className={styles.left}>
         <img src={props.eventLogo} alt="" />
-        <h3>{props.eventName}<br/>{props.matchTime}</h3>
+        <h4>{props.eventName}<br/>{props.matchTime}</h4>
       </div>
       <div className={styles.right}>
         <div className={styles.team1}>
